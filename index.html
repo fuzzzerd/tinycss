@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tiny CSS Test Page</title>
+
+    <link rel="stylesheet" href="tinycss.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="/">a link.</a>
+        <a href="/">a link.</a>
+        <a href="/">a link.</a>
+        <a href="/">a link.</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Header 1</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mauris
+        eleifend, posuere ipsum sit amet, mattis elit. Integer nec tortor augue.
+        Quisque dignissim odio id urna tempor efficitur. Vivamus tincidunt
+        consectetur magna, sit amet rutrum sapien fermentum eget. Integer
+        consectetur ac massa ac consectetur. Vestibulum sed quam vitae sem
+        lacinia sodales sed ut turpis. Sed pharetra volutpat mattis. Sed
+        interdum dui in rhoncus faucibus. Aenean nec maximus nisi. Duis justo
+        libero, dictum id consequat vel, rhoncus sit amet justo. Nam dapibus
+        ligula at metus pellentesque, in facilisis nunc lacinia. Suspendisse nec
+        arcu a ante ultrices lacinia ac quis dui. Sed efficitur at nisi in
+        pellentesque. Pellentesque dapibus, felis eget faucibus ullamcorper, sem
+        risus aliquet eros, a lacinia sem massa quis erat.
+      </p>
+      <a href="/">a link.</a> <a href="/not-visited.link">unvisited link.</a>
+      <p>
+        Curabitur id nisi quis dolor rhoncus euismod a id massa. Sed at cursus
+        arcu, rutrum ultricies lorem. In ultrices arcu sit amet ipsum suscipit
+        consequat. Fusce ornare, diam ac mollis sodales, tortor lorem
+        scelerisque tellus, sit amet facilisis arcu sem ac dolor. Mauris ut
+        tellus ac massa consequat euismod et et justo. Nulla at porttitor massa.
+        Duis congue viverra condimentum. Suspendisse ornare massa leo, sed
+        finibus lorem ultrices in. Suspendisse convallis metus eget scelerisque
+        tempus. Quisque vitae ullamcorper eros. Etiam vel enim vel ipsum
+        vestibulum placerat. Phasellus posuere ex augue, sed vulputate massa
+        imperdiet at. Suspendisse vulputate tempus nisi, non vehicula lorem
+        venenatis eu. Donec at luctus urna.
+      </p>
+
+      <h2>Table Of Data</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Entry Header 1</th>
+            <th>Entry Header 2</th>
+            <th>Entry Header 3</th>
+            <th>Entry Header 4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Entry First Line 1</td>
+            <td>Entry First Line 2</td>
+            <td>Entry First Line 3</td>
+            <td>Entry First Line 4</td>
+          </tr>
+          <tr>
+            <td>Entry Line 1</td>
+            <td>Entry Line 2</td>
+            <td>Entry Line 3</td>
+            <td>Entry Line 4</td>
+          </tr>
+          <tr>
+            <td>Entry Last Line 1</td>
+            <td>Entry Last Line 2</td>
+            <td>Entry Last Line 3</td>
+            <td>Entry Last Line 4</td>
+          </tr>
+          <tr>
+            <td>Entry Line 1</td>
+            <td>Entry Line 2</td>
+            <td>Entry Line 3</td>
+            <td>Entry Line 4</td>
+          </tr>
+          <tr>
+            <td>Entry Last Line 1</td>
+            <td>Entry Last Line 2</td>
+            <td>Entry Last Line 3</td>
+            <td>Entry Last Line 4</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Entry Footer 1</th>
+            <th>Entry Footer 2</th>
+            <th>Entry Footer 3</th>
+            <th>Entry Footer 4</th>
+          </tr>
+        </tfoot>
+      </table>
+      <h2>Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your full name" />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
+
+          <label for="hours">Hours:</label>
+          <input type="number" id="hours" placeholder="Enter your hours" />
+
+          <label for="cust">Customer:</label>
+          <select id="cust">
+            <option>Customer 1</option>
+            <option>Customer 2</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" placeholder="What's on your mind?"></textarea>
+
+          <label for="billable">Billable:</label>
+          <input type="radio" id="billable" name="hours-type" />
+
+          <label for="nobill">Non-billable:</label>
+          <input type="radio" id="nobill" name="hours-type" />
+
+          <input type="submit" value="Send message" />
+        </fieldset>
+      </form>
+
+      <h2>Theme Switcher</h2>
+      <input
+        type="radio"
+        id="light"
+        name="theme-name"
+        value="light"
+        onclick="setTheme('light')"
+      />
+      <label for="light">light</label><br />
+      <input
+        type="radio"
+        id="dark"
+        name="theme-name"
+        value="dark"
+        onclick="setTheme('dark')"
+      />
+      <label for="dark">dark</label><br />
+
+      <input
+        type="radio"
+        id="high-contrast"
+        name="theme-name"
+        value="high-contrast"
+        onclick="setTheme('high-contrast')"
+      />
+      <label for="high-contrast">high-contrast</label><br />
+    </main>
+    <footer>author, (c), etc</footer>
+    <script>
+      // let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      // if (dark) setTheme("dark");
+
+      function setTheme(theme) {
+        document.documentElement.classList.add("theme-switch");
+        document.documentElement.setAttribute("data-theme", theme);
+        window.setTimeout(function () {
+          document.documentElement.classList.remove("theme-switch");
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
