@@ -11,7 +11,7 @@ The purpose of this CSS starter kit, is to provide a decent out of the box exper
 Take your pick. You have options:
 
 - Copy the `.css` file and drop it in to your site as-is.
-- Grab the `.scss` file and incorporate that in your build process.
+- Grab the `.scss` files and incorporate that in your build process.
 
 There isn't a wrong way to use it.
 
@@ -26,7 +26,7 @@ choco install sass
 Once installed, you can run
 
 ```ps
-sass tinycss.scss tinycss.min.css --style compressed --watch
+sass tinycss.scss tinycss.min.css --style compressed
 ```
 
-to generate the files you see here, or use other cli options from sass to suit your specific needs.
+to generate the files you see here, or use other cli options from sass to suit your specific needs. Use the `--watch` parameter for ongoing development.

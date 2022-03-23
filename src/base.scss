@@ -1,0 +1,63 @@
+// todo: high-contrast: https://mwichary.medium.com/dark-theme-in-a-day-3518dde2955a
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --sans-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --background: #fff;
+  --accent-background: #dfe1e9;
+  --text: #252525;
+  --text-light: #585858;
+  --border: #cecfd4;
+  --accent: #fa986b;
+}
+
+html {
+  font-family: var(--sans-font);
+  scroll-behavior: smooth;
+  font-size: 16pt;
+  color: var(--text);
+  background: var(--background);
+}
+
+html[data-theme="dark"] {
+  --background: rgb(52, 51, 58);
+  --accent-background: rgb(81, 79, 90);
+  --text: #d8d8d8;
+  --text-light: #ffffff;
+}
+
+html.theme-switch,
+html.theme-switch *,
+html.theme-switch *:before,
+html.theme-switch *:after {
+  transition: all 650ms !important;
+  transition-delay: 0 !important;
+}
+
+header {
+  color: var(--text);
+}
+
+footer {
+  color: var(--text-light);
+}
+
+body {
+  padding: 0 1rem;
+}
+
+a {
+  color: #b44512;
+  text-decoration: underline;
+  &:visited {
+    color: var(--text);
+    text-decoration: dotted;
+  }
+  &:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+}

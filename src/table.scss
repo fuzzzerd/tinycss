@@ -1,0 +1,36 @@
+// table style
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  th {
+    color: var(--accent);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  td,
+  th {
+    padding: 0.75rem 0.75rem;
+  }
+
+  thead {
+    border-bottom: solid 2px var(--border);
+  }
+
+  tbody {
+    tr:nth-child(2n + 1) {
+      background-color: var(--accent-background);
+    }
+    tr {
+      border: solid 1px var(--border);
+      border-left: 0;
+      border-right: 0;
+    }
+  }
+
+  tfoot {
+    border-top: solid 2px var(--border);
+  }
+}
