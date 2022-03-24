@@ -14,19 +14,19 @@
   --accent: #fa986b;
 }
 
+html[data-theme="dark"] {
+  --background: rgb(52, 51, 58);
+  --accent-background: rgb(81, 79, 90);
+  --text: #d8d8d8;
+  --text-light: #ffffff;
+}
+
 html {
   font-family: var(--sans-font);
   scroll-behavior: smooth;
   font-size: 16pt;
   color: var(--text);
   background: var(--background);
-}
-
-html[data-theme="dark"] {
-  --background: rgb(52, 51, 58);
-  --accent-background: rgb(81, 79, 90);
-  --text: #d8d8d8;
-  --text-light: #ffffff;
 }
 
 html.theme-switch,
