@@ -13,7 +13,7 @@ Take your pick. You have options:
 - Copy the `.css` file and drop it in to your site as-is.
 - Grab the `.scss` files and incorporate that in your build process.
 
-There isn't a wrong way to use it.
+Then simply amend `:root` variables per your colors and specs. There isn't a wrong way to use it.
 
 ## Build and Test Locally
 
@@ -26,7 +26,13 @@ choco install sass
 Once installed, you can run
 
 ```ps
-sass tinycss.scss tinycss.min.css --style compressed
+sass tinycss.scss:demo/tinycss.css --watch --style expanded --embed-sources
 ```
 
 to generate the files you see here, or use other cli options from sass to suit your specific needs. Use the `--watch` parameter for ongoing development.
+
+To generate minified output:
+
+```ps
+sass demo/tinycss.css:demo/tinycss.min.css --style compressed
+```

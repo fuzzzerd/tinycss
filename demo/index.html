@@ -7,20 +7,20 @@
 
     <title>Tiny CSS Test Page</title>
 
-    <link rel="stylesheet" href="tinycss.min.css" />
+    <link rel="stylesheet" href="tinycss.css" />
   </head>
 
   <body>
     <header>
       <nav>
-        <a href="/">a link.</a>
-        <a href="/">a link.</a>
-        <a href="/">a link.</a>
-        <a href="/">a link.</a>
+        <a href="#paragraph">Paragraph Content.</a>
+        <a href="#tabledata">Table Data</a>
+        <a href="#formdata">Form Data</a>
+        <a href="#themeswitcher">Theme Switcher</a>
       </nav>
     </header>
     <main>
-      <h1>Header 1</h1>
+      <h1 id="paragraph">Header 1</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a mauris
         eleifend, posuere ipsum sit amet, mattis elit. Integer nec tortor augue.
@@ -50,7 +50,7 @@
         venenatis eu. Donec at luctus urna.
       </p>
 
-      <h2>Table Of Data</h2>
+      <h2 id="tabledata">Table Of Data</h2>
       <table>
         <thead>
           <tr>
@@ -101,7 +101,7 @@
           </tr>
         </tfoot>
       </table>
-      <h2>Form</h2>
+      <h2 id="formdata">Form</h2>
       <form action="#" method="post">
         <fieldset>
           <label for="name">Name:</label>
@@ -136,7 +136,7 @@
         </fieldset>
       </form>
 
-      <h2>Theme Switcher</h2>
+      <h2 id="themeswitcher">Theme Switcher</h2>
       <input
         type="radio"
         id="light"
