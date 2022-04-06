@@ -131,6 +131,14 @@ textarea {
   display: inline-block;
   border: 1px solid var(--border);
 }
+input:focus,
+select:focus,
+textarea:focus {
+  outline-color: var(--accent);
+  border: 1px solid var(--accent);
+  outline: none;
+  box-shadow: 0 0 10px var(--accent);
+}
 
 input[type=checkbox],
 input[type=radio] {
