@@ -10,6 +10,13 @@ textarea {
   width: 100%;
   display: inline-block;
   border: 1px solid var(--border);
+
+  &:focus {
+    outline-color: var(--accent);
+    border: 1px solid var(--accent);
+    outline: none;
+    box-shadow: 0 0 10px var(--accent);
+  }
 }
 
 input[type="checkbox"],
