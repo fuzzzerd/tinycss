@@ -4,33 +4,25 @@
 
 :root {
   --sans-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --background-light: #fff;
-  --accent-background-light: #dfe1e9;
-  --text-light: #252525;
-  --text-light-light: #585858;
-  --background-dark: rgb(52, 51, 58);
-  --accent-background-dark: rgb(81, 79, 90);
-  --text-dark: #d8d8d8;
-  --text-light-dark: #ffffff;
   --border: #cecfd4;
   --accent: #fa986b;
   --accent-dark: #b44512;
   --accent-light: #f7bca3;
 }
 
-html {
-  --background: var(--background-light);
-  --accent-background: var(--accent-background-light);
-  --text: var(--text-light);
-  --text-light: var(--text-light-light);
+:root {
+  --background: #fff;
+  --accent-background: #dfe1e9;
+  --text: #252525;
+  --text-light: #585858;
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    --background: var(--background-dark);
-    --accent-background: var(--accent-background-dark);
-    --text: var(--text-dark);
-    --text-light: var(--text-light-dark);
+  :root {
+    --background: rgb(52, 51, 58);
+    --accent-background: rgb(81, 79, 90);
+    --text: #d8d8d8;
+    --text-light: #ffffff;
   }
 }
 html {
