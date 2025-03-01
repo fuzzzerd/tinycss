@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+}
+
 :root {
   --sans-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --border: #cecfd4;
@@ -39,10 +43,6 @@ header {
 
 footer {
   color: var(--text-light);
-}
-
-body {
-  padding: 0 1rem;
 }
 
 a {
@@ -118,6 +118,7 @@ table tfoot {
 
 input,
 select,
+button,
 textarea {
   font-size: inherit;
   font-family: inherit;
@@ -131,6 +132,7 @@ textarea {
 }
 input:focus,
 select:focus,
+button:focus,
 textarea:focus {
   outline-color: var(--accent);
   border: 1px solid var(--accent);
@@ -141,6 +143,65 @@ textarea:focus {
 input[type=checkbox],
 input[type=radio] {
   width: auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  justify-content: space-between;
+}
+
+.col {
+  padding: 1rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.col-small {
+  flex-basis: 25%;
+}
+
+.col-medium {
+  flex-basis: 50%;
+}
+
+.col-large {
+  flex-basis: 100%;
+}
+
+@media (max-width: 1200px) {
+  .col-small {
+    flex-basis: 33.33%;
+  }
+  .col-medium {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 992px) {
+  .col-small {
+    flex-basis: 50%;
+  }
+  .col-medium {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .col-small, .col-medium {
+    flex-basis: 100%;
+  }
 }
 
 /*# sourceMappingURL=tinycss.css.map */

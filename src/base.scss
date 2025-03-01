@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+p {
+  margin: 0;
+}
 
 :root {
   --sans-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -40,10 +43,6 @@ header {
 
 footer {
   color: var(--text-light);
-}
-
-body {
-  padding: 0 1rem;
 }
 
 a {
