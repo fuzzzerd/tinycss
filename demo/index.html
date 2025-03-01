@@ -16,7 +16,6 @@
         <a href="#paragraph">Paragraph Content.</a>
         <a href="#tabledata">Table Data</a>
         <a href="#formdata">Form Data</a>
-        <a href="#themeswitcher">Theme Switcher</a>
       </nav>
     </header>
     <main>
@@ -135,47 +134,7 @@
           <input type="submit" value="Send message" />
         </fieldset>
       </form>
-
-      <h2 id="themeswitcher">Theme Switcher</h2>
-      <input
-        type="radio"
-        id="light"
-        name="theme-name"
-        value="light"
-        onclick="setTheme('light')"
-      />
-      <label for="light">light</label><br />
-      <input
-        type="radio"
-        id="dark"
-        name="theme-name"
-        value="dark"
-        onclick="setTheme('dark')"
-      />
-      <label for="dark">dark</label><br />
-
-      <input
-        type="radio"
-        id="high-contrast"
-        name="theme-name"
-        value="high-contrast"
-        onclick="setTheme('high-contrast')"
-      />
-      <label for="high-contrast">high-contrast</label><br />
     </main>
     <footer>author, (c), etc</footer>
-    <script>
-      // let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-      // if (dark) setTheme("dark");
-
-      function setTheme(theme) {
-        document.documentElement.classList.add("theme-switch");
-        document.documentElement.setAttribute("data-theme", theme);
-        window.setTimeout(function () {
-          document.documentElement.classList.remove("theme-switch");
-        }, 1000);
-      }
-    </script>
   </body>
 </html>
