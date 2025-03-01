@@ -23,13 +23,19 @@ To build and run locally, you need to install `sass`
 choco install sass
 ```
 
-Once installed, you can run
+or using nodejs/npm:
+
+```ps
+npm install -g sass
+```
+
+Once installed, you can run:
 
 ```ps
 sass tinycss.scss:demo/tinycss.css --watch --style expanded --embed-sources
 ```
 
-to generate the files you see here, or use other cli options from sass to suit your specific needs. Use the `--watch` parameter for ongoing development.
+to generate the files you see here. Use other cli options from sass to suit your specific needs. The `--watch` parameter is useful for local development.
 
 To generate minified output:
 
